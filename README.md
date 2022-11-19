@@ -1,4 +1,7 @@
 # Phishing-Domain-Detection
+<img width="933" alt="phishing1" src="https://user-images.githubusercontent.com/69419106/202843701-a84061f7-f869-438e-b796-39a8d738cf15.png">
+<img width="943" alt="phishing2" src="https://user-images.githubusercontent.com/69419106/202843704-8acd1dfd-015e-4cc9-9e32-50655dfe6e44.png">
+
 
 Phishing is a type of fraud in which an attacker impersonates a reputable company or person in order to get sensitive information such as login credentials or account information via email or other communication channels. Phishing is popular among attackers because it is easier to persuade someone to click a malicious link that appears to be authentic than it is to break through a computer's protection measures. The mail goal is to predict whether the domains are real or malicious. Approach: The classical machine learning tasks like Data Exploration, Data Cleaning, Feature Engineering, Model Building and Model Testing.
 
