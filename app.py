@@ -2,7 +2,7 @@ from flask import Flask,render_template,request
 import pickle
 from feature_extraction import *
 
-model = pickle.load(open('Phishing-Domain-Detection/rf_model.pkl','rb'))
+model = pickle.load(open('rf_model.pkl','rb'))
 
 app = Flask(__name__, template_folder='templates')
 

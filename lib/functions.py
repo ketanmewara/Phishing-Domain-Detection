@@ -26,7 +26,7 @@ def count_params(text):
 def get_asn_number(url):
     """Return the ANS number associated with the IP."""
     try:
-        with geoip2.database.Reader('Phishing-Domain-Detectio/lib/GeoLite2-ASN.mmdb') as reader:
+        with geoip2.database.Reader('lib/GeoLite2-ASN.mmdb') as reader:
             if valid_ip(url['domain']):
                 ip = url['domain']
             else:
@@ -43,7 +43,7 @@ def get_asn_number(url):
 
 def check_shortener(url):
     """Check if the domain is a shortener."""
-    file = open('Phishing-Domain-Detection/lib/shorteners.txt', 'r')
+    file = open('lib/shorteners.txt', 'r')
     for line in file:
         with_www = "www." + line.strip()
         if line.strip() == url['domain'].lower() or with_www == url['domain'].lower():
@@ -54,7 +54,7 @@ def check_shortener(url):
 
 def check_tld(text):
     """Check for presence of Top-Level Domains (TLD)."""
-    file = open('Phishing-Domain-Detection/lib/tlds.txt', 'r')
+    file = open('lib/tlds.txt', 'r')
     pattern = re.compile("[a-zA-Z0-9.]")
     for line in file:
         i = (text.lower().strip()).find(line.strip())
@@ -68,7 +68,7 @@ def check_tld(text):
 
 def count_tld(text):
     """Return amount of Top-Level Domains (TLD) present in the URL."""
-    file = open('Phishing-Domain-Detection/lib/tlds.txt', 'r')
+    file = open('lib/tlds.txt', 'r')
     count = 0
     pattern = re.compile("[a-zA-Z0-9.]")
     for line in file:
