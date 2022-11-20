@@ -6,15 +6,18 @@ model = pickle.load(open('rf_model.pkl','rb'))
 
 app = Flask(__name__, template_folder='templates')
 
-@app.route('/')
+"""Home Page"""
+@app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
 
+"""Predict Method"""
 @app.route("/predict", methods=['POST'])
 def predict():
     if request.method == 'POST':
         url = request.form['url']
-        print(url)
+        http_url = 'http://' + url
+        # print(http_url)
         urlObj = feature_extraction(url)
         dict_url = urlObj.start_url()
         url_base_feature = urlObj.url_based_feature_extract(dict_url)
@@ -27,12 +30,7 @@ def predict():
 
         prediction = model.predict([final_data])
 
-        # if prediction[0] == 0:
-        #     legitimate = 'legitimate Website'
-        # else:
-        #     phishing = 'Phishing Website'
-
-        return render_template('index.html',URL = url, output = prediction[0])
+        return render_template('index.html',URL = http_url, output = prediction[0])
 
 
 if __name__ == '__main__':

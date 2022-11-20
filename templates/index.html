@@ -31,14 +31,14 @@
         </div>
         {% if output==0 %}
         <a href={{URL}}><span style="color:green">{{URL}}</span></a>
-        <h4 style="color: green;"> Legitimate Domain - Website is safe to use...
+        <h4 style="color: green;"> Legitimate Real Domain - Website is safe to use...
           <br>
         </h4>
           <a href={{URL}} target="blank" class="btn btn-success" role="button" aria-pressed="true">Safe to Continue</a>
 							
         {% elif output==1 %}
         <a href={{URL}}><span style="color:red">{{URL}}</span></a>
-        <h4 style="color: red;"> Phishing Domain - Website is unsafe to use...
+        <h4 style="color: red;"> Malicious Domain - Website is unsafe to use...
           <br>
         </h4>
           <a href={{URL}} target="blank" class="btn btn-danger" role="button" aria-pressed="true">Unsafe to Continue</a>

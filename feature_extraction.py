@@ -27,6 +27,8 @@ class feature_extraction:
     """url infomation"""
     def start_url(self):
         """Split URL into: protocol, host, path, params, query and fragment."""
+        if '/' in self.url[-1]:
+            self.url = self.url[:-1]  
         if not urlparse(self.url.strip()).scheme:
             self.url = 'http://' + self.url
         
