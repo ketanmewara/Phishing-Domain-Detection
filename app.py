@@ -16,7 +16,8 @@ def home():
 def predict():
     if request.method == 'POST':
         url = request.form['url']
-        http_url = 'http://' + url
+        if 'http' not in url:
+            url = 'http://' + url
         # print(http_url)
         urlObj = feature_extraction(url)
         dict_url = urlObj.start_url()
@@ -30,7 +31,7 @@ def predict():
 
         prediction = model.predict([final_data])
 
-        return render_template('index.html',URL = http_url, output = prediction[0])
+        return render_template('index.html',URL = url, output = prediction[0])
 
 
 if __name__ == '__main__':

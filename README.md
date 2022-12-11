@@ -2,9 +2,9 @@
 <img width="923" alt="phishing1" src="https://user-images.githubusercontent.com/69419106/202852023-b8dadec5-76e1-4309-a9d1-55d4aebd55af.png">
 <img width="913" alt="phishing2" src="https://user-images.githubusercontent.com/69419106/202852028-ea53e0c9-d3b0-4fce-a777-aab753dd69ee.png">
 
-Phishing is a type of fraud in which an attacker impersonates a reputable company or person in order to get sensitive information such as login credentials or account information via email or other communication channels. Phishing is popular among attackers because it is easier to persuade someone to click a malicious link that appears to be authentic than it is to break through a computer's protection measures. The mail goal is to predict whether the domains are real or malicious. Approach: The classical machine learning tasks like Data Exploration, Data Cleaning, Feature Engineering, Model Building and Model Testing.
+Phishing is a type of fraud where an attacker pretends to be someone or something they're not, such as a company or person, in order to get sensitive information. It can be done by email and other communication channels. Phishing is popular among attackers because it's easier to trick people into clicking a link that looks like it's from a legitimate source to access to a computer's protections. The main goal is to identify or predict whether the domain is real or malicious.
 
-### Approach: The classical machine learning tasks like Data Exploration, Data Cleaning, Feature Engineering, Model Building and Model Testing.
+### Approach: Data Exploration, Data Cleaning, Feature Engineering, Model Building, Model Testing and Model Deployement.
 
 ### For Feature Engineering show:-
 
